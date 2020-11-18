@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>UiKit
+    </title>
+    <link rel="stylesheet" href="css/main.css?v=1605668881313">
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="container-fluid">
+          <div class="header__inner">
+            <div class="row"><a class="header__logo" href="index.html"><img src="images/logo.svg" alt="logo"></a>
+              <div class="header__languages languages"><a class="languages__link active" href="/ru">ру</a><a class="languages__link" href="/eng">eng</a></div>
+              <ul class="menu__list">
+                <div class="menu__toggle">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#ic_burger"></use>
+                  </svg><span>menu</span>
+                </div>
+                <li><a class="menu__link" href="">Размещение</a></li>
+                <li><a class="menu__link" href="">Стрельба</a></li>
+                <li><a class="menu__link" href=""> Развлечения</a></li>
+                <li><a class="menu__link" href="">Мероприятия</a></li>
+                <li><a class="menu__link" href="">Контакты</a></li>
+                <li></li>
+              </ul>
+              <div class="header__actions"><a class="header__user" href="">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#ic_user"></use>
+                  </svg></a><a class="header__btn btn btn--blue btn-small">забронировать</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main" id="main">
+        <style>
+          .elem {
+          	margin-bottom: 80px;
+          }
+          .row {
+          	display: flex;
+          	align-items: center
+          }
+          
+          .switch-elem .row .col {
+          	flex: 0 0 15%;
+          }
+          .svg-icons .row .col {
+          	flex: 0 0 4%;
+          }
+          .element .row .col{
+          	flex: 0 0 15%;
+          }
+          
+          .button .row {
+          	max-width: 800px;
+          	margin: 0 0 16px;
+          }
+          
+          .button .row .col {
+          	width: 100%;
+          	margin: 0 10px;
+          }
+          
+          .input .row {
+          	max-width: 730px;
+          	margin: 0 0 37px;
+          }
+          
+          .input .row .col,.select .row .col {
+          	max-width: 350px;
+          	width: 100%;
+          	margin: 5px;
+          }
+          
+          .checkbox .row {
+          	max-width: 350px;
+          }
+          
+          .select .row {
+          	max-width: 730px;
+          }
+          
+          .tooltip .icon {
+          	color: #212429;
+          	fill: transparent;
+          	width: 24px;
+          	height: 24px;
+          }
+          
+          .tooltip .icon svg {
+          	width: 100%;
+          	height: 100%;
+          }
+          .links .row {
+          	margin-bottom: 20px;
+          }
+          .links .row .col{
+          	flex: 0 0 25%;
+          }
+          .nav .row .col {
+           margin-right: 40px;
+          }
+          .block-popup .row {
+          	justify-content: flex-start;
+          }
+          .block-popup .row .col{
+          	width: auto;
+          	max-width: none;
+          	margin-left: 0;
+          	margin-right: 30px;
+          }
+        </style>
+        <div class="wrapper">
+          <h1>Live chat support: a complete guide to live chat implementation and best practices</h1>
+          <div class="button elem">
+            <div class="row">
+              <div class="col"><a class="btn btn--blue btn-large" href="#">найти</a></div>
+              <div class="col"><a class="btn btn--flat" href="#">забронировать </a></div>
+              <div class="col"><a class="btn btn--icon" href="#"> 
+                  <svg class="btn--icon__guest">
+                    <use xlink:href="images/sprites.svg#guest"></use>
+                  </svg><span>x 5 гостей</span></a></div>
+            </div>
+            <div class="row" style="display: flex;">
+              <div class="col"><a class="btn btn--blue disabled btn-large" href="#">найти</a></div>
+              <div class="col"><a class="btn btn--flat disabled" href="#">забронировать</a></div>
+              <div class="col"><a class="btn btn--icon disabled" href="#"> 
+                  <svg class="btn--icon__guest">
+                    <use xlink:href="images/sprites.svg#guest"></use>
+                  </svg><span>x 5 гостей</span></a></div>
+            </div>
+          </div>
+          <div class="button elem">
+            <div class="row">
+              <div class="col"><a class="btn btn--blue btn-small" href="#">найти</a></div>
+              <div class="col"><a class="btn btn--flat btn-small" href="#">забронировать </a></div>
+              <div class="col"><a class="btn btn--icon btn-small" href="#"> 
+                  <svg class="btn--icon__guest">
+                    <use xlink:href="images/sprites.svg#guest"></use>
+                  </svg><span>x 5 гостей</span></a></div>
+            </div>
+            <div class="row" style="display: flex;">
+              <div class="col"><a class="btn btn--blue disabled btn-small" href="#">найти</a></div>
+              <div class="col"><a class="btn btn--flat disabled btn-small" href="#">забронировать</a></div>
+              <div class="col"><a class="btn btn--icon disabled btn-small" href="#"> 
+                  <svg class="btn--icon__guest">
+                    <use xlink:href="images/sprites.svg#guest"></use>
+                  </svg><span>x 5 гостей</span></a></div>
+            </div>
+          </div>
+          <div class="input elem">
+            <div class="row">
+              <div class="col">
+                <label class="form-field">
+                  <input class="js-input js-input-mask form-field__input" type="text"><span class="form-field__label">Фамилия *</span><span class="form-field__icon">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#alert"></use>
+                    </svg></span>
+                </label>
+              </div>
+              <div class="col">
+                <label class="form-field form-field--error">
+                  <input class="js-input form-field__input" type="text" value="Error"><span class="form-field__label">Error</span><span class="form-field__icon">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#alert"></use>
+                    </svg></span>
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label class="form-field disabled">
+                  <input class="js-input form-field__input" type="text"><span class="form-field__label">Disabled</span><span class="form-field__icon">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#alert"></use>
+                    </svg></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="select elem">
+            <div class="row">
+              <div class="col">
+                <div class="form-select"><span class="form-select__label">Select</span>
+                  <select class="js-select" name="state">
+                    <option value="MA">Magnetic</option>
+                    <option value="GY">Gravity</option>
+                    <option value="ME">Mechanical Mechanical</option>
+                    <option value="EL">Electronic</option>
+                    <option value="EL">Electronic</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-select"><span class="form-select__label">Select </span>
+                  <select class="js-select" name="state">
+                    <option value="MA">Magnetic<span>+1 000 руб. / час</span></option>
+                    <option value="GY">Gravity<span>+3 300 руб. / час</span></option>
+                    <option value="ME">Mechanical<span>+660 - 1500 руб. / час</span></option>
+                    <option value="EL">Electronic</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-select disabled"><span class="form-select__label">Select</span>
+                  <select class="js-select" name="state">
+                    <option value="MA">Disabled</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tag elem">
+            <div class="row">
+              <div class="col">
+                <div class="tag"><a class="tag__item" href="#!"><span>1 of 12</span></a><a class="tag__item" href="#!"><span>Favorite</span></a><a class="tag__item" href="#!"><span>Category</span></a><a class="tag__item tag__item--icon" href="#!">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#share"></use>
+                    </svg><span>SHared</span></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="links elem">
+            <div class="row">
+              <div class="col"><a class="link link--arrow link--blue" href="#!"><span>Смотреть все</span>
+                  <svg>
+                    <use xlink:href="images/sprites.svg#arrow"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+          <div class="element elem">
+            <div class="row">
+              <div class="col">
+                <div class="counter"><span class="counter__item js-sub"></span><span class="counter__item"><span class="js-counter-text">0</span>
+                    <input class="js-counter-input" title="number" hidden value="0"></span><span class="counter__item js-add"></span></div>
+              </div>
+              <div class="col">
+                <div class="counter__m counter"><span class="counter__item js-sub"></span><span class="counter__item"><span class="js-counter-text">0</span>
+                    <input class="js-counter-input" title="number" hidden value="0"></span><span class="counter__item js-add"></span></div>
+              </div>
+              <div class="col">
+                <div class="counter__sm counter"><span class="counter__item js-sub"></span><span class="counter__item"><span class="js-counter-text">0</span>
+                    <input class="js-counter-input" title="number" hidden value="0"></span><span class="counter__item js-add"></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="nav elem">
+            <div class="row">
+              <div class="col">
+                <div class="close-icon">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#close"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="col">
+                <div class="close-icon-bg close-icon">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#close"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="col">
+                <div class="navigation-arrows__item-icon navigation-arrows__item">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="navigation-arrows">
+                  <div class="navigation-arrows__item">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="navigation-arrows__item">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="navigation-arrows-light navigation-arrows">
+                  <div class="navigation-arrows__item">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="navigation-arrows__item">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="navigation-arrows-sm navigation-arrows">
+                  <div class="navigation-arrows__item">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="navigation-arrows__item">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="navigation-arrows-circle navigation-arrows">
+                  <div class="navigation-arrows__item">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#arrow"></use>
+                    </svg>
+                  </div>
+                  <div class="navigation-arrows__item">
+                    <svg>
+                      <use xlink:href="images/sprites.svg#arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="svg-icons elem">
+            <div class="row">
+              <div class="col">
+                <div class="search-icon">
+                  <svg class="icon">
+                    <use xlink:href="images/sprites.svg#ic_search"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="col">
+                <div class="book-icon">
+                  <svg class="icon">
+                    <use xlink:href="images/sprites.svg#ic_book"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="col">
+                <div class="shoot-icon">
+                  <svg class="icon">
+                    <use xlink:href="images/sprites.svg#ic_shoot"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="col">
+                <div class="rest-icon">
+                  <svg class="icon">
+                    <use xlink:href="images/sprites.svg#ic_rest"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="col">
+                <div class="spa-icon">
+                  <svg class="icon">
+                    <use xlink:href="images/sprites.svg#ic_spa"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="col">
+                <div class="others-icon">
+                  <svg class="icon">
+                    <use xlink:href="images/sprites.svg#ic_others"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="col">
+                <div class="user-icon">
+                  <svg class="icon">
+                    <use xlink:href="images/sprites.svg#ic_user"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="col">
+                <div class="login-icon">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#login"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="col">
+                <div class="login-icon logged">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#login"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="col">
+                <div class="eye-icon icon-bg__circle">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#camera"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="col">
+                <div class="facebook-icon icon-bg__circle">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#facebook"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="col">
+                <div class="eye-icon icon-bg__circle">
+                  <svg>
+                    <use xlink:href="images/sprites.svg#eye"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="switch-elem elem">
+            <div class="row">
+              <div class="col">
+                <label class="switch__label" for="switch1">
+                  <input class="switch__input" id="switch1" type="checkbox"><span class="switch__slider"></span>
+                </label>
+                <label class="switch__label" for="switch2">
+                  <input class="switch__input" id="switch2" type="checkbox"><span class="switch__slider"></span>
+                </label>
+              </div>
+              <div class="col">
+                <label class="switch__label" for="switch3">
+                  <input class="switch__input" id="switch3" type="checkbox"><span class="switch__slider switch__slider-orange"></span>
+                </label>
+                <label class="switch__label" for="switch4">
+                  <input class="switch__input" id="switch4" type="checkbox"><span class="switch__slider switch__slider-orange2"></span>
+                </label>
+              </div>
+              <div class="col">
+                <div class="delete__icon">
+                  <svg class="delete">
+                    <use xlink:href="images/sprites.svg#close"></use>
+                  </svg>
+                </div>
+                <div class="delete__icon delete-icon__dark">
+                  <svg class="delete">
+                    <use xlink:href="images/sprites.svg#close"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="links">
+            <div class="row">
+              <div class="col"><a class="link" href="">
+                  <svg class="link__icon-add">
+                    <use xlink:href="images/sprites.svg#plus-minus"></use>
+                  </svg><span>Добавить гостя</span></a></div>
+              <div class="col"><a class="link disabled" href=""> 
+                  <svg class="link__icon-add">
+                    <use xlink:href="images/sprites.svg#plus-minus"></use>
+                  </svg><span>Добавить гостя</span></a></div>
+            </div>
+            <div class="row">
+              <div class="col"><a class="link" href="">
+                  <svg class="link__icon-rule">
+                    <use xlink:href="images/sprites.svg#rule"></use>
+                  </svg><span>Правила безопасности</span></a></div>
+              <div class="col"><a class="link disabled" href="">
+                  <svg class="link__icon-rule">
+                    <use xlink:href="images/sprites.svg#rule"></use>
+                  </svg><span>Правила безопасности</span></a></div>
+            </div>
+            <div class="row">
+              <label class="form-checkbox"></label>
+              <input class="form-checkbox__input js-agree" type="checkbox"><span class="form-checkbox__checkmark"></span><a class="form-checkbox__text link__text" href="#" target="_blank">
+                <p>Ознакомлен с политикой и выражаю согласие на <span>Обработку </span>	 моих персональных данных.</p>
+                <p>Ознакомлен с <span>Правилами </span>	бронирования и<span>Правилами</span>нахождении на территории </p></a>
+            </div>
+            <div class="row">
+              <div class="col"><a class="link-email" href="">reception@foxlodge.ru</a></div>
+            </div>
+          </div>
+          <div class="form-block">
+            <h5>Форма обратной связи</h5>
+            <form class="form js-form" action="#">
+              <div class="form-row">
+                <div class="form-col">
+                  <label class="form-field">
+                    <input class="js-input form-field__input" type="text" name="name" data-msg="" required><span class="form-field__label">Ваше имя</span><span class="form-field__icon"></span>
+                  </label>
+                </div>
+                <div class="form-col">
+                  <label class="form-field">
+                    <input class="js-input js-input-mask form-field__input" type="tel" name="tel" data-mask="+7(999)999-99-99" data-msg="" required><span class="form-field__label">Ваш телефон</span><span class="form-field__icon"></span>
+                  </label>
+                </div>
+                <div class="form-col">
+                  <label class="form-field">
+                    <input class="js-input js-input-mask form-field__input" type="email" name="email" data-mask="konstantinipolev@yan" data-msg="" required><span class="form-field__label">Email</span><span class="form-field__icon"></span>
+                  </label>
+                </div>
+                <div class="form-line">
+                  <label class="form-field form-field-textarea">
+                    <textarea class="js-input form-field__input form-field__textarea" name="message" data-msg="" required></textarea><span class="form-field__label form-field__label--top">Ваше сообщение</span><span class="form-field__icon"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-bottom">
+                <label class="form-checkbox">
+                  <input class="form-checkbox__input js-agree" type="checkbox"><span class="form-checkbox__checkmark"></span><a class="form-checkbox__text link__text" href="#" target="_blank">
+                    <p> Ознакомлен с политикой и выражаю согласие на <span> Обработку </span>	 моих персональных данных.</p>
+                    <p> Ознакомлен с <span> Правилами </span>	бронирования и<span> Правилами</span> нахождении на территории </p></a>
+                </label>
+                <button class="submit btn btn--blue btn-small" type="submit" disabled="disabled">Отправить</button>
+              </div>
+            </form>
+          </div>
+          <div class="button elem block-popup">
+            <h2>Пример открытия попапов</h2>
+            <div class="row">
+              <div class="col"><a class="btn btn--blue btn-large js-popup-link" data-link="feedback">Попап с формой</a></div>
+              <div class="col"><a class="btn btn--blue btn-large js-popup-link" data-link="ajax-content" href="ajax-content-example.html" data-href="ajax-content-example.html">Ajax-попап</a></div>
+              <div class="col"><a class="btn btn--blue btn-large js-popup-link" data-link="video" data-src="https://www.youtube.com/embed/Euv2ramIrv4?autoplay=1">Попапа с видео</a></div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="row">
+            <div class="col">
+              <div class="d-block">
+                <p> <b>Размещение</b></p>
+                <p>Бумеранг </p>
+                <p>Коттеджи</p>
+                <p>FOX-INN</p>
+                <p>Лоджи Highlands</p>
+              </div>
+              <div class="d-block">
+                <p><b>Рестораны</b></p>
+                <p>RED DEER</p>
+                <p>СПА-Кафе</p>
+                <p>Барбекю</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-block">
+                <p> <b>Стрельба</b></p>
+                <p>Стрельба по тарелочкам</p>
+                <p>Пулевая стрельба</p>
+                <p>Оружейная мастерская</p>
+              </div>
+              <div class="d-block">
+                <p> <b>Foxland SPA</b></p>
+                <p>Услуги SPA</p>
+                <p> Контакты</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-block">
+                <p> <b>Развлечения</b></p>
+                <p>Спортивные площадки</p>
+                <p>Фитнес</p>
+                <p>Ледовая Арена</p>
+                <p>Прокат инвентаря</p>
+                <p>Спортивные маршруты</p>
+                <p>Рыбалка</p>
+                <p>Детские площадки</p>
+                <p>Гольф-симулятор</p>
+                <p>Виртуальный тир</p>
+                <p>Бильярд</p>
+                <p>Боулинг</p>
+                <p>Караоке</p>
+              </div>
+            </div>
+            <div class="col"> 
+              <div class="d-block">
+                <p> <b>Мероприятия</b></p>
+                <p>Корпоративные мероприятия</p>
+                <p>Частные мероприятия</p>
+                <p>Для Event-агентств</p>
+                <p>Календарь мероприятий</p>
+              </div>
+            </div>
+            <div class="col"> 
+              <div class="contacts">
+                <div class="copywright">© 2020 ООО «Лисья нора» ОГРН 1155007000037</div>
+                <div class="email__block">
+                  <p>Email</p>
+                  <hr><small>Подписаться на новости</small>
+                </div>
+                <p>Правила комплекса</p>
+                <p>Тарифы услуг</p>
+                <p>Контакты</p>
+                <h5>+7 (495) 120−92−29	</h5>
+                <div class="social">
+                  <div class="item">
+                    <div class="eye-icon icon-bg__circle">
+                      <svg>
+                        <use xlink:href="images/sprites.svg#camera"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="facebook-icon icon-bg__circle">
+                      <svg>
+                        <use xlink:href="images/sprites.svg#facebook"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="eye-icon icon-bg__circle">
+                      <svg>
+                        <use xlink:href="images/sprites.svg#eye"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="popup js-popup" data-block="feedback">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <div class="popup__close js-popup-close">
+              <svg>
+                <use xlink:href="images/sprites.svg#close"></use>
+              </svg>
+            </div>
+            <div class="popup-block">
+              <div class="form-block">
+                <h5>Форма обратной связи</h5>
+                <form class="form js-form" action="#">
+                  <div class="form-row">
+                    <div class="form-col">
+                      <label class="form-field">
+                        <input class="js-input form-field__input" type="text" name="name" data-msg="" required><span class="form-field__label">Ваше имя</span><span class="form-field__icon"></span>
+                      </label>
+                    </div>
+                    <div class="form-col">
+                      <label class="form-field">
+                        <input class="js-input js-input-mask form-field__input" type="tel" name="tel" data-mask="+7(999)999-99-99" data-msg="" required><span class="form-field__label">Ваш телефон</span><span class="form-field__icon"></span>
+                      </label>
+                    </div>
+                    <div class="form-col">
+                      <label class="form-field">
+                        <input class="js-input js-input-mask form-field__input" type="email" name="email" data-mask="konstantinipolev@yan" data-msg="" required><span class="form-field__label">Email</span><span class="form-field__icon"></span>
+                      </label>
+                    </div>
+                    <div class="form-line">
+                      <label class="form-field form-field-textarea">
+                        <textarea class="js-input form-field__input form-field__textarea" name="message" data-msg="" required></textarea><span class="form-field__label form-field__label--top">Ваше сообщение</span><span class="form-field__icon"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-bottom">
+                    <label class="form-checkbox">
+                      <input class="form-checkbox__input js-agree" type="checkbox"><span class="form-checkbox__checkmark"></span><a class="form-checkbox__text link__text" href="#" target="_blank">
+                        <p> Ознакомлен с политикой и выражаю согласие на <span> Обработку </span>	 моих персональных данных.</p>
+                        <p> Ознакомлен с <span> Правилами </span>	бронирования и<span> Правилами</span> нахождении на территории </p></a>
+                    </label>
+                    <button class="submit btn btn--blue btn-small" type="submit" disabled="disabled">Отправить</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="popup__layout js-popup-close"></div>
+        </div>
+      </div>
+      <div class="popup js-popup" data-block="ajax-content">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <div class="popup__close js-popup-close">
+              <svg>
+                <use xlink:href="images/sprites.svg#close"></use>
+              </svg>
+            </div>
+            <div class="js-ajax-wrapper"></div>
+          </div>
+          <div class="popup__layout js-popup-close"></div>
+        </div>
+      </div>
+      <div class="popup js-popup" data-block="video">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <div class="popup__close js-popup-close">
+              <svg>
+                <use xlink:href="images/sprites.svg#close"></use>
+              </svg>
+            </div>
+            <iframe class="js-iframe" src="" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="popup__layout js-popup-close"></div>
+        </div>
+      </div>
+      <div class="popup-thank" id="popup-thank">
+        <div class="popup__wrapper">
+          <div class="popup-thank__content">
+            <div class="popup__close">
+              <svg>
+                <use xlink:href="images/sprites.svg#close"></use>
+              </svg>
+            </div>
+            <h4>Спасибо за заявку. Наши менеджеры свяжутся с вами в ближайшее время.</h4>
+          </div>
+        </div>
+      </div>
+      <script src="js/vendor.js?v=1605668881313"></script>
+      <script src="js/main.js?v=1605668881313"></script>
+    </div>
+  </body>
+</html>
